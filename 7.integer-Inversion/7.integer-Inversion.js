@@ -2,7 +2,11 @@
  * @param {number} x
  * @return {number}
  */
+<<<<<<< HEAD
+function reverse(x) {
+=======
 var reverse = function(x) {
+>>>>>>> aabe0d74504df2fd80176c4e478385249b361508
     var rev = 0;
     var INT_MAX = 2147483647;
     var INT_MIN = -2147483648;
@@ -17,5 +21,12 @@ var reverse = function(x) {
     return rev;
 };
 
+<<<<<<< HEAD
+// let a = reverse(9147483647);
+// console.log(a);
+
+module.exports = reverse;
+=======
 let a = reverse(9147483647);
 console.log(a);
+>>>>>>> aabe0d74504df2fd80176c4e478385249b361508
