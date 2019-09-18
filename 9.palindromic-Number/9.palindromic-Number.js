@@ -1,9 +1,14 @@
-function isPalindromic(x){
+/**
+ * @param {number} x
+ * @return {boolean}
+ */
+var isPalindrome = function(x) {
     if(x == 0){
         return true;
-    }else if((x%0==0) || x<0){
+    }else if(x<0 || x%10==0){
         return false;
     }else {
+        var target = x;
         var rev = 0;
         var INT_MAX = 2147483647;
         var INT_MIN = -2147483648;
@@ -15,12 +20,13 @@ function isPalindromic(x){
             if (rev < INT_MIN/10 || (rev == INT_MIN / 10 && pop < -8)) return 0;
             rev = rev * 10 + pop;
         }
-        if(rev == x){
-            return true;
-        }else {
-            return false;
-        }
+            if(rev == target){
+                return true;
+            }else {
+                return false;
+            }
     }
-}
 
-console.log(isPalindromic(121))
+};
+
+module.exports = isPalindrome;
