@@ -8,10 +8,11 @@ var twoSum = function(nums, target) {
     for(var i = 0; i < nums.length; i++){
         for(var j = 1+i; j < nums.length; j++){
             if(nums[i]+nums[j] == target){
-                console.log(i,j);
+                return [i,j];
             }
         }
     }
 };
-var nums = [3,2,4];
-twoSum(nums, 6);
+// var nums = [3,2,4];
+// twoSum(nums, 6);
+module.exports = twoSum;

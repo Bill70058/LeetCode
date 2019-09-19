@@ -1,0 +1,19 @@
+{
+  "name": "1.the-Sum-Of-Two-Number",
+  "version": "1.0.0",
+  "description": "----",
+  "main": "1.the-Sum-Of-Two-Number.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^24.9.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^24.9.0",
+    "regenerator-runtime": "^0.13.3"
+  }
+}
