@@ -1,15 +1,17 @@
 /**
- * @param {外部传入的数组} nums
- * @param {最后返回出的二维数组} matrix
- * @param {用于排序的函数表达式} subfunc
- * @param {初始传递的是nums数组，后来是内部新建的拼接数组1} subfunc -> arr
- * @param {初始为空数组，后来是内部新建的拼接数组2，或称为临时数组} subfunc -> temp
+ * @param {Array} nums - 外部传入的数组
+ * @param {Array} matrix - 最后返回出的二维数组
  * @return {number[][]}
  */
 var permute = function(nums) {
     // 定义一个数组，用于储存数组，称呼他为大数组
     let matrix = [];
-    //定义一个函数表达式用于递归调用排序
+    
+    /**
+     * @function - 用于递归调用排序
+     * @param {Array} arr - 初始传递的是nums数组，后来是内部新建的拼接数组1
+     * @param {Array} temp - 初始为空数组，后来是内部新建的拼接数组2，或称为临时数组
+     */
     const subfunc = (arr, temp) => {
         //形参数组为空则将临时数组推入外部的大数组
       if (arr.length === 0) {
