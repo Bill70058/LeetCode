@@ -6,5 +6,8 @@ describe('reverse words',()=>{
     });
     test('input abcdefg return gfedcba',()=>{
         expect(reverseWords('abcdefg')).toEqual('gfedcba');
+    });
+    test('input Welcome to China return emocleW ot anihC',()=>{
+        expect(reverseWords('Welcome to China')).toEqual('emocleW ot anihC');
     })
 })
