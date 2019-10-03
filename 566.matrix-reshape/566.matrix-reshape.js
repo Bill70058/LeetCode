@@ -6,7 +6,9 @@
  */
 var matrixReshape = function(nums, r, c) {
     //如果因数组长度原因无法转换则返回原数组
-    if (nums.length == 0 || r * c != nums.length * nums[0].length)
+    const targetLength = r*c;
+    const trueLength = nums.length * nums[0].length;
+    if (nums.length == 0 || targetLength != trueLength)
             return nums;
     var arr = [];
     var arrs = new Array(r);
