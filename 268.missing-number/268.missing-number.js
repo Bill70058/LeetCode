@@ -8,7 +8,7 @@ var missingNumber = function(nums) {
         return a-b;
     })
     for(let i = 0; i < n; i++){
-        if(nums[i] != i){
+        if(nums[i] !== i){
             return i;
         }
     }
