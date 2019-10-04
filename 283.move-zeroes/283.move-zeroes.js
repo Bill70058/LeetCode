@@ -4,15 +4,21 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 var moveZeroes = function(nums) {
-    var count = [];
+    var count = 0;
+    var temp = [];
     for(let i = 0; i < nums.length; i++){
-        if(nums[i] == 0){
-            let temp = nums.splice(i,1);
-            count = count.concat(temp);
-        }
+        nums[i] == 0?count++:temp.push(nums[i]);
     }
-    nums = nums.concat(count);
+    while(count != 0){
+        temp.push(0);
+        count--;
+    }
+    for(let i = 0,len = nums.length; i < len; i++){
+        nums[i] = temp[i];
+    }
     return nums;
+
 };
 
+console.log(moveZeroes([0,0,1]))
 module.exports = moveZeroes;
