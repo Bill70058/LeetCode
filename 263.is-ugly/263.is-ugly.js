@@ -8,19 +8,19 @@ var isUgly = function(num) {
     }
     while(num){
         let temp = num;
-        if(num % 2 == 0){
+        if(num % 2 === 0){
             num = parseInt(num) / 2;
         }
-        if(num % 3 == 0){
+        if(num % 3 === 0){
              num = parseInt(num) / 3;
         }
-        if(num % 5 == 0){
+        if(num % 5 === 0){
              num = parseInt(num) / 5;
         }
-        if(num == 1){
+        if(num === 1){
             return true;
         }
-        if(temp == num){
+        if(temp === num){
             return false;
         }
     }
