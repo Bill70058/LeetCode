@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {string[]}
  */
-var findRelativeRanks = function(nums) {
+const findRelativeRanks = function(nums) {
     var arr = Array.from(nums);
     arr.sort((a,b)=>{
         return b-a;
