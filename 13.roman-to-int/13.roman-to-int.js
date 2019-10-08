@@ -22,23 +22,23 @@ const romanToInt = function(s) {
     };
 
     // 用于返回的总数
-    let ans = 0;
+    let answer = 0;
     // console.log(s.length);
     for(let i = 0;i < s.length;) {
         //如果字符串能够取两位，并且这两位能够在字典中找到则取出，累加，i 后移两位
         // console.log(map[s.substring(i,i+2)]);
         if(i + 1 < s.length && map[s.substring(i, i+2)]) {
             // console.log(s.substring(i,i+2));
-            ans += map[s.substring(i, i+2)];
+            answer += map[s.substring(i, i+2)];
             i += 2;
         } else {
             // 否则，字典取出这一位，并且i 后移一位
             // console.log(s.substring(i,i+1));
-            ans += map[s.substring(i, i+1)];
+            answer += map[s.substring(i, i+1)];
             i ++;
         }
     }
-    return ans;
+    return answer;
 };
 
 console.log(romanToInt('MCMXC'))
