@@ -30,14 +30,10 @@ var toLowerCase = function(str) {
         'X':'x',
         'Y':'y',
         'Z':'z',
-    }
-
-
+    };
     str = str.split('');
     for(let i = 0; i < str.length; i++){
-        // console.log(upperMap[str[i]]);
         if(upperMap[str[i]]){
-            // console.log(str[i],upperMap[str[i]]);
             str[i] = upperMap[str[i]];
         }
     }
