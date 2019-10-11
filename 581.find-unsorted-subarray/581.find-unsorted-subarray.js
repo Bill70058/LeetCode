@@ -2,13 +2,15 @@
  * @param {number[]} nums
  * @return {number}
  */
-var findUnsortedSubarray = function(nums) {
+const findUnsortedSubarray = function(nums) {
     let numCopy = Array.from(nums);
     let min = 0,max = 0;
     numCopy.sort((a,b)=>{
         return a-b;
     });
-    if(equals(nums,numCopy)){return 0}
+    if(isArrayEquals(nums,numCopy)){
+        return 0;
+    }
     for(let i = 0,len = nums.length; i < len; i++){
         if(nums[i] !== numCopy[i]){
             min = i;
@@ -25,7 +27,7 @@ var findUnsortedSubarray = function(nums) {
 };
 
 
-function equals(a,b){
+function isArrayEquals(a,b){
     for(let i in a){
         if(a[i] !== b[i])
             return false;
