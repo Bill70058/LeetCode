@@ -2,7 +2,7 @@
  * @param {string[]} cpdomains
  * @return {string[]}
  */
-var subdomainVisits = function(cpdomains) {
+const subdomainVisits = function(cpdomains) {
     let map = new Map();
     let answer = [];
     for(let i = 0; i < cpdomains.length; i++){
