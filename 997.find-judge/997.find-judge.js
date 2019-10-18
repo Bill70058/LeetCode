@@ -3,28 +3,28 @@
  * @param {number[][]} trust
  * @return {number}
  */
-var findJudge = function(N, trust) {
+var findJudge = function(totalPeople, trust) {
     let count =  [];
-    let judge = -1;
-    let j = 0;
+    let judgeIndex = -1;
+    let believeJudgePeople = 0;
     for(let i = 0; i < trust.length; i++){
         count.push(trust[i][0]);
     };
     
-    for(let i = 1; i <= N; i++){
+    for(let i = 1; i <= totalPeople; i++){
         if(!count.includes(i)){
-            judge = i;
+            judgeIndex = i;
         }
     }
     
     
     for(let i = 0; i < trust.length;i++){
-        if(trust[i][1] === judge){
-            j++;
+        if(trust[i][1] === judgeIndex){
+            believeJudgePeople++;
         }
     }
-    if(judge !== -1 && (N-j) === 1){
-        return judge;
+    if(judgeIndex !== -1 && (totalPeople-believeJudgePeople) === 1){
+        return judgeIndex;
     }
     return -1;
 };
