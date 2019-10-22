@@ -12,20 +12,21 @@
  * @param {function} isBadVersion()
  * @return {function}
  */
-var solution = function(isBadVersion) {
+var solution = function (isBadVersion) {
     /**
      * @param {integer} n Total versions
      * @return {integer} The first bad version
      */
-    return function(number) {
-        let lower = 1,height = number;
+    return function (number) {
+        let lower = 1,
+            height = number;
         let mid;
-        while(lower < height){
+        while (lower < height) {
             //这里加上左边界是为了防止边界溢出
-            mid = lower + parseInt((height - lower)/2);
-            if(isBadVersion(mid)){
+            mid = lower + parseInt((height - lower) / 2);
+            if (isBadVersion(mid)) {
                 height = mid;
-            }else {
+            } else {
                 lower = mid + 1;
             }
         }
