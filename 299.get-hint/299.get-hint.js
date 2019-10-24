@@ -22,7 +22,11 @@ var getHint = function (secret, guess) {
 
         }
     }
-    return A + 'A' + B + 'B';
+    return changeToString(A,B);
 };
+
+function changeToString(numA,numB) {
+    return numA + 'A' + numB + 'B';
+}
 
 module.exports = getHint;
