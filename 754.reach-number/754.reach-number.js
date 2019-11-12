@@ -10,15 +10,11 @@ var reachNumber = function (target) {
         count++;
         sum += count;
     }
-    let dt = sum - target;
-    if (dt % 2 === 0) {
+    let difference = sum - target;
+    if (difference % 2 === 0) {
         return count;
     } else {
-        if (count % 2 === 0) {
-            return count + 1;
-        } else {
-            return count + 2;
-        }
+        return count % 2 === 0? count + 1:count + 2;
     }
 };
 
