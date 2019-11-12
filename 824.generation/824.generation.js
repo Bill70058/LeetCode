@@ -25,12 +25,9 @@ var toGoatLatin = function(S) {
     return Sstr.join(' ');
 };
 
-function GenerationA(index){
-    let a = '';
-    for(let i = 0; i <= index; i++){
-        a+='a';
-    }
-    return a;
+function generationA(index){
+    let a = 'a';
+    return a.repeat(index);
 }
 
 module.exports = toGoatLatin;
