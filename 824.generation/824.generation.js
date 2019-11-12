@@ -5,9 +5,9 @@
 var toGoatLatin = function(S) {
     //每个单词都以空格分割，再逐个分割
     let map = ['a','e','i','o','u','A','E','I','O','U'];
-    let Sstr = S.split(' ');
-    for(let i = 0; i < Sstr.length; i++){
-        let str = Sstr[i].split('');
+    let SToArray = S.split(' ');
+    for(let i = 0; i < SToArray.length; i++){
+        let str = SToArray[i].split('');
         if(map.includes(str[0])){
             str.push('ma');
         }else {
@@ -15,14 +15,14 @@ var toGoatLatin = function(S) {
             str.push(first);
             str.push('ma');
         }
-        Sstr[i] = str.join('');
+        SToArray[i] = str.join('');
     }
 
-    for(let i = 0; i < Sstr.length; i++){
-        Sstr[i] += GenerationA(i);
+    for(let i = 0; i < SToArray.length; i++){
+        SToArray[i] += GenerationA(i);
     }
 
-    return Sstr.join(' ');
+    return SToArray.join(' ');
 };
 
 function generationA(index){
