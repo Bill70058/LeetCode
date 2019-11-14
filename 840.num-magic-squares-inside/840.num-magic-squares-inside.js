@@ -5,7 +5,9 @@
 var numMagicSquaresInside = function (grid) {
     let row = grid.length,
         column = grid[0].length,
-        answer = 0;
+        answer = 0,
+        fifty = 15,
+        ten = 10;
 
     //判断对角为 [i-2][j-2] ~ [i][j] 的3阶矩阵是否为幻方
     for (let i = 2; i < row; i++) {
@@ -14,18 +16,18 @@ var numMagicSquaresInside = function (grid) {
             if (grid[i - 1][j - 1] != 5)
                 continue;
             //若行、列、斜线和 存在一个不为15， 则跳过
-            if ((grid[i - 2][j - 2] + grid[i - 2][j - 1] + grid[i - 2][j] != 15) ||
-                (grid[i - 1][j - 2] + grid[i - 1][j] != 10) ||
-                (grid[i][j - 2] + grid[i][j - 1] + grid[i][j] != 15)
+            if ((grid[i - 2][j - 2] + grid[i - 2][j - 1] + grid[i - 2][j] != fifty) ||
+                (grid[i - 1][j - 2] + grid[i - 1][j] != ten) ||
+                (grid[i][j - 2] + grid[i][j - 1] + grid[i][j] != fifty)
 
                 ||
-                (grid[i - 2][j - 2] + grid[i - 1][j - 2] + grid[i][j - 2] != 15) ||
-                (grid[i - 2][j - 1] + grid[i][j - 1] != 10) ||
-                (grid[i - 2][j] + grid[i - 1][j] + grid[i][j] != 15)
+                (grid[i - 2][j - 2] + grid[i - 1][j - 2] + grid[i][j - 2] != fifty) ||
+                (grid[i - 2][j - 1] + grid[i][j - 1] != ten) ||
+                (grid[i - 2][j] + grid[i - 1][j] + grid[i][j] != fifty)
 
                 ||
-                (grid[i - 2][j - 2] + grid[i][j] != 10) ||
-                (grid[i - 2][j] + grid[i][j - 2] != 10)
+                (grid[i - 2][j - 2] + grid[i][j] != ten) ||
+                (grid[i - 2][j] + grid[i][j - 2] != ten)
             )
                 continue;
             //若存在小于1的数直接跳过（若有不再1～9范围的数，必存在超过9的数和小于1的数）
