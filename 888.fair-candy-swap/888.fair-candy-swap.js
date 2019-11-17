@@ -10,12 +10,8 @@ var fairCandySwap = function (A, B) {
         difference = 0,
         i = 0,
         j = 0;
-    for (let num of A) {
-        sumA += num;
-    }
-    for (let num of B) {
-        sumB += num;
-    }
+    sumA = sum(A);
+    sumB = sum(B);
     A.sort((a, b) => a - b);
     B.sort((a, b) => a - b);
     difference = parseInt(sumA - parseInt((sumA + sumB) / 2))
@@ -33,5 +29,11 @@ var fairCandySwap = function (A, B) {
     return answer;
 };
 
-
+function sum(array){
+    let total = 0;
+    for(let num of array){
+        total += num;
+    }
+    return total;
+}
 module.exports = fairCandySwap;
