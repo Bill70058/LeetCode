@@ -21,3 +21,4 @@ var uniqueOccurrences = function(arr) {
     return count.length === map.size;
 };
 
+module.exports = uniqueOccurrences;
