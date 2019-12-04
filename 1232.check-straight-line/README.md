@@ -31,3 +31,10 @@
 - coordinates[i].length == 2
 - -10^4 <= coordinates[i][0], coordinates[i][1] <= 10^4
 - coordinates 中不含重复的点
+
+----
+#### 解题思路
+核心思路：斜率公式 - 
+``(y1-y0)/(x1-x0)=(yi-y0)/(xi-x0)``
+防止除0，变换成相乘的形式
+``(y1-y0)*(xi-x0)==(x1-x0)*(yi-y0)`` 
