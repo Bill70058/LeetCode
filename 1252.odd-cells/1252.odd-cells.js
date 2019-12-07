@@ -6,14 +6,9 @@
  */
 var oddCells = function(n, m, indices) {
     // 将行和列单独提出来，分别进行更改。即假设行和列互不影响
-    let r = new Array(n);
-    let c = new Array(m);
-    for(let i = 0; i < n; i++){
-        r[i] = true;
-    }
-    for(let j = 0; j < m; j++){
-        c[j] = true;
-    }
+    let r = Array.from({length:n},()=>true);
+    let c = Array.from({length:m},()=>true);
+    
     for(let i = 0; i < indices.length; i++){
         r[indices[i][0]] = !r[indices[i][0]];
         c[indices[i][1]] = !c[indices[i][1]];
