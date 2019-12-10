@@ -7,7 +7,7 @@ var lengthOfLongestSubstring = function (s) {
         res = 0;
     let m = '';
     for (let n of s) {
-        if (m.indexOf(n) == -1) {
+        if (m.indexOf(n) === -1) {
             m += n;
             num++;
             res = res < num ? num : res;
