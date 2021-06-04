@@ -28,3 +28,19 @@ F(N) = F(N - 1) + F(N - 2), 其中 N > 1.
 **注意**
 ``题目所说的结果需要取余是每次计算的结果都要``
 1、遍历
+2、递归
+3、递归记忆优化
+递归中有重复的计算，定义
+4、使用动态规划
+```typescript
+function fib(n: number): number {
+  let a: number = 0, b: number = 1
+  let sum: number
+  for(let i = 0; i < n; i++) {
+      sum = (a+b) % 1000000007
+      a = b
+      b = sum
+  }
+  return a
+};
+```
